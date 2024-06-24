@@ -161,8 +161,9 @@ body {
 }
 
 .modal-content > p {
+  font-size: 1.05rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.6;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -189,6 +190,12 @@ body {
   background-color: #1565c0;
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.flex-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .main-container {
@@ -254,6 +261,10 @@ section {
   margin-bottom: 2rem;
 }
 
+li > span {
+  font-weight: 700;
+}
+
 ul {
   list-style-type: disc;
   padding-left: 20px;
@@ -263,4 +274,59 @@ ul {
 li {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  .modal {
+    padding: 10px;
+    max-width: 300px;
+  }
+
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrapper {
+    max-width: 400px;
+  }
+
+  blockquote {
+    font-size: 1rem;
+    max-width: 300px;
+    margin: 1rem auto;
+    padding: 0.8rem 10px 0.8rem 50px;
+  }
+
+  blockquote::before {
+    font-family: Arial;
+    content: "\201C";
+    color: #78c0a8;
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+  }
+
+  blockquote::after {
+    content: "";
+  }
+
+  blockquote span {
+    display: block;
+    color: #333333;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
 }
